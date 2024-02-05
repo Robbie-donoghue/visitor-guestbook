@@ -3,19 +3,23 @@ form {
   /* Add your form styles here */
   margin: 0 auto;
   width: 80%;
+  background-color: salmon;
 }
 
 /* Media queries for different device sizes */
-@media screen and (max-width: 768px) {
+@media (width>= 600px) {
   /* Styles for smaller devices */
   form {
     width: 90%;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (width >= 450px) {
   /* Styles for mobile devices */
   form {
     width: 100%;
   }
+}
+body {
+  background-color: salmon;
 }
