@@ -26,7 +26,7 @@ app.get("/guestbook", (req, res) => {
     if (req.query.id) {
       let guestBook = db
         .prepare(`SELECT * FROM guestbook WHERE id = ?`)
-        .all(`req.query.id`);
+        .all(req.query.id);
       res.status(200).json(guestBook);
       return;
     }
@@ -41,7 +41,7 @@ app.get("/guestbook", (req, res) => {
 app.post("/guestbook", (req, res) => {
   //try catch
   try {
-    //set varibles
+    //set variables
     const name = req.body.name;
     const date = req.body.date;
     const comment = req.body.comment;

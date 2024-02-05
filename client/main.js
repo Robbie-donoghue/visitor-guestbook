@@ -44,8 +44,8 @@ async function displayGuests() {
     let pTag = document.createElement("p");
     let commentTag = document.createElement("p");
     let delButton = document.createElement("p");
-    let infoDiv = document.createElement(`div`);
-    let guestCard = document.createElement(`div`);
+    let infoDiv = document.createElement("div");
+    let guestCard = document.createElement("div");
     h3Tag.textContent = guest.name;
     h3Tag.setAttribute(`class`, `guestName`);
     pTag.textContent = guest.date;
@@ -67,6 +67,7 @@ async function displayGuests() {
       // delete function
       handleDelete(guest.id);
     });
+    console.log(guests);
   });
 }
 
@@ -80,5 +81,6 @@ async function handleDelete(id) {
     displayGuests();
   }
 }
+
 // call display guests
 displayGuests();
